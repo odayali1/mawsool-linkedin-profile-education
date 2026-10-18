@@ -1,0 +1,61 @@
+{
+  "title": "LinkedIn Education Scraper | School, Degree",
+  "type": "object",
+  "schemaVersion": 1,
+  "description": "LinkedIn education scraper. Paste profile URLs and get each school, degree, field of study, start and end years, and the school URL. You supply the URL. One charge per profile, Starting from $0.45 per 1,000 profiles.",
+  "properties": {
+    "urls": {
+      "title": "LinkedIn profile URLs",
+      "type": "array",
+      "description": "Add linkedin.com/in/... URLs.",
+      "editor": "stringList",
+      "prefill": [
+        "https://www.linkedin.com/in/osama-abdelhadi/"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "urlsCsv": {
+      "title": "Or paste CSV",
+      "type": "string",
+      "description": "A url column. One URL per row is also accepted.",
+      "editor": "textarea",
+      "prefill": "url\nhttps://www.linkedin.com/in/osama-abdelhadi/"
+    },
+    "fileUrl": {
+      "title": "Or upload a CSV file",
+      "type": "string",
+      "description": "CSV with a url or linkedinUrl column.",
+      "editor": "fileupload"
+    },
+    "maxUrls": {
+      "title": "Maximum URLs",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 50000,
+      "description": "Cost-control cap. Maximum 50,000. A list over 200 continues if the run stops."
+    },
+    "concurrency": {
+      "title": "Concurrent requests",
+      "type": "integer",
+      "description": "How many URLs to look up at the same time.",
+      "default": 10,
+      "minimum": 1,
+      "maximum": 40
+    },
+    "resumeId": {
+      "title": "Resume ID (optional)",
+      "type": "string",
+      "description": "Reuse this ID to skip URLs that already succeeded.",
+      "editor": "textfield"
+    },
+    "freshStart": {
+      "title": "Look up finished URLs again",
+      "type": "boolean",
+      "description": "Turn this on to ignore saved progress and look up the whole list again.",
+      "default": false
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "actorSpecification": 1,
+  "title": "LinkedIn Education Scraper",
+  "description": "One result row. A URL is charged once even when it produces several rows.",
+  "fields": {
+    "type": "object",
+    "properties": {
+      "inputUrl": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "inputUrl"
+      },
+      "fullName": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "fullName"
+      },
+      "school": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "school"
+      },
+      "degree": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "degree"
+      },
+      "field": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "field"
+      },
+      "startYear": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "startYear"
+      },
+      "endYear": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "endYear"
+      },
+      "schoolUrl": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "title": "schoolUrl"
+      },
+      "educationCount": {
+        "type": [
+          "integer",
+          "null"
+        ],
+        "title": "educationCount"
+      },
+      "success": {
+        "type": "boolean",
+        "title": "success"
+      }
+    }
+  },
+  "views": {
+    "flat": {
+      "title": "Flat results",
+      "transformation": {
+        "fields": [
+          "inputUrl",
+          "fullName",
+          "school",
+          "degree",
+          "field",
+          "startYear",
+          "endYear",
+          "schoolUrl",
+          "educationCount",
+          "success"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {}
+      }
+    }
+  }
+}

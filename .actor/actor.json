@@ -1,0 +1,40 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "mawsool-linkedin-profile-education",
+  "title": "LinkedIn Education Scraper | School, Degree",
+  "description": "LinkedIn education scraper. Paste profile URLs and get each school, degree, field of study, start and end years, and the school URL. You supply the URL. One charge per profile, Starting from $0.45 per 1,000 profiles. No LinkedIn login and no cookies.",
+  "seoTitle": "LinkedIn Education History Scraper by URL",
+  "seoDescription": "LinkedIn education scraper. School, degree, field of study, years, and school URL from a profile URL you already have. Starting from $0.45 per 1,000 profiles.",
+  "categories": [
+    "LEAD_GENERATION",
+    "SOCIAL_MEDIA",
+    "AUTOMATION"
+  ],
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 21600,
+    "memoryMbytes": 256
+  },
+  "environmentVariables": {
+    "ACTOR_SLICE": "education",
+    "CHARGE_EVENT": "profile-education",
+    "GUEST_API_BASE_URL": "https://guest.mawsool.tech",
+    "GUEST_API_KEY": "@mawsoolGuestApiKey"
+  },
+  "meta": {
+    "templateId": "ts-empty",
+    "generatedBy": "Cursor Agent"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "pricing": "./pay_per_event.json",
+  "dockerfile": "../Dockerfile"
+}
