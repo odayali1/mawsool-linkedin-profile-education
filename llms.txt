@@ -1,0 +1,26 @@
+# LinkedIn Education Scraper
+
+> Send a profile URL you already have. You get each school, the degree, the field of study, the years, and the school URL.
+
+Mawsool publishes this as an Apify Actor. Starting from $0.45 per 1,000 profiles.
+
+## Run
+
+- Apify Actor: https://apify.com/oday/mawsool-linkedin-profile-education
+- Call: `oday/mawsool-linkedin-profile-education`
+- API key: https://mawsool.tech/ and https://docs.mawsool.tech/
+- Contact: osama@mawsool.tech, info@mawsool.tech
+
+## Use it when
+
+You are matching alumni, a school, or a degree.
+
+## Use something else when
+
+You need the full profile. Use the LinkedIn Profile Scraper.
+
+## Page
+
+- LinkedIn education history from a profile URL: docs/linkedin-education-history.md
+
+Mawsool is not affiliated with LinkedIn.
